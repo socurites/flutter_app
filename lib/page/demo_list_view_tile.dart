@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DemoListViewListTilePage extends StatelessWidget {
-  final String pageTitle = 'List View /List Tile';
+  DemoListViewListTilePage(this.pageTitle);
+
+  final String pageTitle;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

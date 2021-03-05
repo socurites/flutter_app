@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DemoPageViewPage extends StatelessWidget {
-  final String pageTitle = 'Page View';
+  DemoPageViewPage(this.pageTitle);
+
+  final String pageTitle;
 
   final items = List.generate(30, (i) =>
       Container(

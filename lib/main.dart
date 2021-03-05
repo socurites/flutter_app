@@ -4,7 +4,8 @@ import 'package:flutter_app/page/demo_list_view_tile.dart';
 import 'package:flutter_app/page/demo_page_view.dart';
 import 'package:flutter_app/page/demo_scroll_view.dart';
 import 'package:flutter_app/page/demo_tab.dart';
-import 'package:flutter_app/struct/quantity_counter_button.dart';
+import 'package:flutter_app/struct/floating_action_button_view.dart';
+import 'package:flutter_app/struct/quantity_counter_button_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -89,7 +90,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.of(context).pop();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DemoScrollViewPage()));
+                      MaterialPageRoute(builder: (context) => DemoScrollViewPage('Scroll List')));
                 },
               ),
               ListTile(
@@ -99,7 +100,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.of(context).pop();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DemoListViewListTilePage()));
+                      MaterialPageRoute(builder: (context) => DemoListViewListTilePage('List View / List Tile')));
                 },
               ),
               ListTile(
@@ -109,7 +110,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.of(context).pop();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DemoGridViewPage()));
+                      MaterialPageRoute(builder: (context) => DemoGridViewPage('Grid View')));
                 },
               ),
               ListTile(
@@ -119,7 +120,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.of(context).pop();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DemoPageViewPage()));
+                      MaterialPageRoute(builder: (context) => DemoPageViewPage('Page View')));
                 },
               ),
               ListTile(
@@ -129,7 +130,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.of(context).pop();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DemoTabPage()));
+                      MaterialPageRoute(builder: (context) => DemoTabPage('Tab')));
                 },
               ),
               SizedBox(
@@ -150,13 +151,23 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               ListTile(
-                title: Text('QuantityCounter'),
+                title: Text('QuantityCounter Button'),
                 trailing: Icon(Icons.navigate_next),
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => QuantityCounterButton()));
+                      MaterialPageRoute(builder: (context) => QuantityCounterButton('QuantityCounter Button')));
+                },
+              ),
+              ListTile(
+                title: Text('Floating Action Button'),
+                trailing: Icon(Icons.navigate_next),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => FloatingActionButtonViewPage('Floating Action Button')));
                 },
               ),
             ],

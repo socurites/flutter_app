@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DemoTabPage extends StatelessWidget {
-  final String pageTitle = 'Tab';
+  DemoTabPage(this.pageTitle);
+
+  final String pageTitle;
 
   final items = List.generate(3, (i) =>
       Container(

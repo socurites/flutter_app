@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class QuantityCounterButton extends StatefulWidget {
-  final String pageTitle = 'Quantity Counter Button';
+  QuantityCounterButton(this.pageTitle);
+
+  final String pageTitle;
 
   @override
   _QuantityCounterButtonState createState() => _QuantityCounterButtonState(pageTitle);

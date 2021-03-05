@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DemoGridViewPage extends StatelessWidget {
-  final String pageTitle = 'Grid View';
+  DemoGridViewPage(this.pageTitle);
+
+  final String pageTitle;
 
   final items = List.generate(30, (i) =>
       Container(
