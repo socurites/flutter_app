@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/internal/element_tree_basic_view.dart';
 import 'package:flutter_app/page/demo_grid_view.dart';
 import 'package:flutter_app/page/demo_list_view_tile.dart';
 import 'package:flutter_app/page/demo_page_view.dart';
@@ -168,6 +169,33 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => FloatingActionButtonViewPage('Floating Action Button')));
+                },
+              ),
+              SizedBox(
+                height: 40.0,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: Colors.amberAccent,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Internal Examples",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              ListTile(
+                title: Text('Element Tree Basic'),
+                trailing: Icon(Icons.navigate_next),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ElementTreeBasicViewPage('Element Tree Basic')));
                 },
               ),
             ],

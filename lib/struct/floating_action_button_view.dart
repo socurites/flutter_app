@@ -22,6 +22,20 @@ class _FloatingActionButtonViewPageState extends State<FloatingActionButtonViewP
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              margin: EdgeInsets.only(
+                bottom: 100.0,
+              ),
+              padding: EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                color: Colors.blue.withOpacity(0.25),
+                borderRadius: BorderRadius.circular(4.0),
+              ),
+              child: Image.asset(
+                'assets/flutter_logo_1080.png',
+                width: 100.0,
+              ),
+            ),
             Text(
               'You have pushed the button this many times:',
             ),
@@ -35,32 +49,40 @@ class _FloatingActionButtonViewPageState extends State<FloatingActionButtonViewP
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Inc',
-        child: Icon(Icons.add),
+        tooltip: 'Reset',
+        child: Icon(Icons.refresh),
       ),
     );
   }
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _counter = 0;
     });
   }
 
   _getRaisedButtons() {
     return Container(
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(
-              'Raised Button'
-          ),
           RaisedButton(
             child: Text(
-                'Decrement Counter'
+                'Decrement'
             ),
             onPressed: () {
               setState(() {
                 _counter--;
+              });
+            },
+          ),
+          RaisedButton(
+            child: Text(
+                'Increment'
+            ),
+            onPressed: () {
+              setState(() {
+                _counter++;
               });
             },
           ),
