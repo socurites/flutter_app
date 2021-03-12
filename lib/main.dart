@@ -4,6 +4,7 @@ import 'package:flutter_app/page/demo_grid_view.dart';
 import 'package:flutter_app/page/demo_list_view_tile.dart';
 import 'package:flutter_app/page/demo_page_view.dart';
 import 'package:flutter_app/page/demo_scroll_view.dart';
+import 'package:flutter_app/page/demo_stack_view.dart';
 import 'package:flutter_app/page/demo_tab.dart';
 import 'package:flutter_app/struct/floating_action_button_view.dart';
 import 'package:flutter_app/struct/quantity_counter_button_view.dart';
@@ -83,6 +84,16 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              ListTile(
+                title: Text('Stack'),
+                trailing: Icon(Icons.navigate_next),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DemoStackViewPage('Stack')));
+                },
               ),
               ListTile(
                 title: Text('Scroll List'),

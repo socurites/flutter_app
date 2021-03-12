@@ -18,6 +18,7 @@ class _ElementTreeBasicViewPageState extends State<ElementTreeBasicViewPage> {
   @override
   Widget build(BuildContext context) {
     final incrementButton = FancyButton(
+      key: _buttonKeys.first,
       child: Text(
         "Increment",
         style: TextStyle(color: Colors.white),
@@ -26,6 +27,7 @@ class _ElementTreeBasicViewPageState extends State<ElementTreeBasicViewPage> {
     );
 
     final decrementButton = FancyButton(
+      key: _buttonKeys.last,
       child: Text(
         "Decrement",
         style: TextStyle(color: Colors.white),
