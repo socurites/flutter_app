@@ -6,6 +6,7 @@ import 'package:flutter_app/page/demo_page_view.dart';
 import 'package:flutter_app/page/demo_scroll_view.dart';
 import 'package:flutter_app/page/demo_stack_view.dart';
 import 'package:flutter_app/page/demo_tab.dart';
+import 'package:flutter_app/page/demo_table_view.dart';
 import 'package:flutter_app/struct/floating_action_button_view.dart';
 import 'package:flutter_app/struct/quantity_counter_button_view.dart';
 
@@ -143,6 +144,16 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => DemoTabPage('Tab')));
+                },
+              ),
+              ListTile(
+                title: Text('Table'),
+                trailing: Icon(Icons.navigate_next),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DemoTableViewPage('Table')));
                 },
               ),
               SizedBox(
